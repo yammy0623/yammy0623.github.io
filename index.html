@@ -135,5 +135,37 @@
     <footer>
         &copy; 2023 Your Name
     </footer>
+    <script>
+        // JavaScript代码区域
+
+        // 示例：在页面加载时添加动画效果
+        document.addEventListener("DOMContentLoaded", function() {
+            // 获取要添加动画效果的元素
+            var header = document.querySelector("header");
+            var sections = document.querySelectorAll("section");
+
+            // 添加动画效果
+            header.style.opacity = "0"; // 隐藏头部
+            header.style.transform = "translateY(-20px)"; // 上移头部
+
+            sections.forEach(function(section) {
+                section.style.opacity = "0"; // 隐藏部分元素
+                section.style.transform = "translateY(20px)"; // 下移部分元素
+            });
+
+            // 使用setTimeout延时执行动画
+            setTimeout(function() {
+                header.style.opacity = "1";
+                header.style.transform = "translateY(0)";
+            }, 500);
+
+            setTimeout(function() {
+                sections.forEach(function(section) {
+                    section.style.opacity = "1";
+                    section.style.transform = "translateY(0)";
+                });
+            }, 800);
+        });
+    </script>
 </body>
 </html>
