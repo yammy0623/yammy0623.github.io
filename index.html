@@ -1,171 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        /* 添加自定义样式 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2, h3 {
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* 自定义样式 */
-        section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Resume</p>
-    </header>
-    <div class="container">
-        <section>
-            <h2>Personal Information</h2>
-            <p>Name: Your Name</p>
-            <p>Contact: Your Contact Information</p>
-            <p>Address: Your Address</p>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li>School Name, Degree, Date</li>
-                <li>School Name, Degree, Date</li>
-                <!-- Add more education details -->
-            </ul>
-        </section>
-
-        <section>
-            <h2>Work Experience</h2>
-            <ul>
-                <li>Company Name, Position, Date</li>
-                <li>Company Name, Position, Date</li>
-                <!-- Add more work experience details -->
-            </ul>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-                <!-- Add more skills -->
-            </ul>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Christine Hsieh</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skill Set</a></li>
+          <li><a href="#projects">Web Application</a></li>
+          <li><a href="#blog">Project/Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Christine Hsieh</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile_pic.png" alt="Christine Hsieh profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Christine Hsieh</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Tzu-Tsen_Hsieh_CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/tzu-tsen-hsieh-924a47208'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/yammy0623'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile_pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h3>Education</h3>
+              <p>B.Sc. Electrical Engineering in NCU<br />
+                M.Sc. Electrical Engineering in NTU<br />
+                Exchange student, Linköping University, Sweden
+              </p>
+            </div>
+            <div class="details-container">
+              <h3>Domain Knowledge</h3>
+              <p>Computer Vision<br />
+                Ultrasound Image Processing<br />
+                Biomedical Signal Processing
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skill Set</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming Language</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Matlab</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C# (.Net Framework)</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git (Github)</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CICD (Jenkins)</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Web Application Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/yozicare_cover.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Yozicare</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/oscarchew/YoziCare'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=ZiV0I_lN80E&feature=youtu.be'"
+              >
+                Demo Video
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/feastforward.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Feastforward</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Wendell-Lin/SE2023Final'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://drive.google.com/drive/folders/1y8cLKo8t0zA0dUT_H2d79MulSyyOd5za'"
+              >
+                All document
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/memohub.PNG"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Memohub</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://drive.google.com/file/d/1Fo5TnyGNC_v17k0dFj3Q91P1m8pJGPmd/view'"
+              >
+                Poster
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=EHVu34YO5D0'"
+              >
+                Demo Video
+              </button>
+            </div>
+          </div>
         
-        <section>
-            <h2>Portfolio</h2>
-            <!-- Add links and descriptions of your portfolio items here -->
-            <ul>
-                <li><a href="#">Portfolio Item 1</a> - Description of the item.</li>
-                <li><a href="#">Portfolio Item 2</a> - Description of the item.</li>
-            </ul>
-        </section>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="blog">
+      <p class="section__text__p1">Browse My</p>
+      <h1 class="title">Project/Research Experience</h1>
+      <br>
+      <p>
+        <b>
+        <a href="https://drive.google.com/file/d/1n9woqFh6UiTVIk-vpKNTavq-BYszzK42/view">Robust Consistent Video Based on Monodepth Estimation from Single Image (Python, Computer Vision)</a>
+        </b>
+        <i>December 2022</i>
+      </p>
+      <br>
+      •	Implemented Monodepth Estimation with the combination of Robust Consistent Video Depth Estimation and Adelai Depth Estimation.
+      <br>
+      •	Enhanced depth estimation accuracy from 0.5138 to 0.9121 in Sintel dataset.
+      <br>
+      <br>
+      <p>
+        <b>
+        <a href="https://github.com/yammy0623/Crypto_Final_RDHEI">Reversible Data Hiding in Encrypted Image via Secret Sharing Based on GF(2^8) (Python, Crypto)</a>
+        </b>
+        <i>May 2022</i>
+      </p>
+      <br>
+      •	Implemented Shamir’s secret sharing integrated with zigzag algorithm for encrypting image.
+      <br>
+      •	Improved PSNR of the decrypted image from 0.5 to infinity and enhances SSIM from 0.98 to 1.
+      <br>
+      <br>
+      <p>
+        <b>
+        <a href="https://drive.google.com/file/d/1FvdaMOYO-xHWnqbkiNi74yhHNPYi93Zv/view">Analyzing Infrastructure of known Phishing Domains Project (Python, Networking)</a>
+        </b>
+        <i>January 2022—June 2022</i>
+      </p>
+      <br>
+      •	Analyzed the probability of being a phishing site based on its infrastructure with Shodan and WhoIs. 
+      <br>
+      •	Utilized web crawler in Python to monitor reported phishing domains on Phishtank and executed shell script on Linux server.
+      <br>
+      •	Collaborated with 3 Swedish students and served as implementor. 
+      <br>
+      <br>
+      <p>
+        <b>
+        <a href="https://drive.google.com/file/d/1YdHeUY1tEe4DxZE6TtlPZbc5dvxdMVwq/view">Brain-Computer Interface for Mirror Learning and Virtual Rehabilitation (Python, Brainwave)</a>
+        </b>
+        <i>July 2020—May 2021</i>
+      </p>
+      <br>
+      •	Aimed at helping paralyzed patients by analyzing imagery electroencephalogram signals to control the virtual character.
+      <br>
+      •	Analyzed signals with common spatial patterns and linear discriminant analysis in Riemann space.
+      <br>
+      <br>
 
-        <section>
-            <h2>Articles</h2>
-            <!-- Add links and descriptions of your articles here -->
-            <ul>
-                <li><a href="#">Article 1</a> - Description of the article.</li>
-                <li><a href="#">Article 2</a> - Description of the article.</li>
-            </ul>
-        </section>
-    </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:christinehsieh0118@gmail.com">christinehsieh0118@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/tzu-tsen-hsieh-924a47208/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
 
     <footer>
-        &copy; 2023 Your Name
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Christine Hsieh. All Rights Reserved.</p>
     </footer>
-    <script>
-        // JavaScript代码区域
-
-        // 示例：在页面加载时添加动画效果
-        document.addEventListener("DOMContentLoaded", function() {
-            // 获取要添加动画效果的元素
-            var header = document.querySelector("header");
-            var sections = document.querySelectorAll("section");
-
-            // 添加动画效果
-            header.style.opacity = "0"; // 隐藏头部
-            header.style.transform = "translateY(-20px)"; // 上移头部
-
-            sections.forEach(function(section) {
-                section.style.opacity = "0"; // 隐藏部分元素
-                section.style.transform = "translateY(20px)"; // 下移部分元素
-            });
-
-            // 使用setTimeout延时执行动画
-            setTimeout(function() {
-                header.style.opacity = "1";
-                header.style.transform = "translateY(0)";
-            }, 500);
-
-            setTimeout(function() {
-                sections.forEach(function(section) {
-                    section.style.opacity = "1";
-                    section.style.transform = "translateY(0)";
-                });
-            }, 800);
-        });
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
